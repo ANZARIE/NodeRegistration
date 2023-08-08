@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Registration Form | NodeJS and ExpressJS</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid w-25 mt-3">
+      <div class="card">
+        <div class="card-header bg-info text-center">Create an account</div>
+
+        <div class="card-body bg-light">
+          <form action="/register/signup" method="POST">
+            <fieldset>
+              <label for="first_name">First Name:</label>
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                class="form-control border-2"
+              />
+
+              <label for="last_name">Last Name:</label>
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                class="form-control border-2"
+              />
+
+              <label for="email">Email:</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control border-2"
+              />
+
+              <label for="password">Password:</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="form-control border-2"
+              />
+
+              <label for="confirm_password">Confirm Password:</label>
+              <input
+                id="confirm_password"
+                name="confirm_password"
+                type="password"
+                class="form-control border-2"
+              />
+
+              <button
+                id="btnRegister"
+                type="submit"
+                class="btn bg-info w-100 mt-3"
+              >Register</button>
+            </fieldset>
+          </form>
+
+          <p>Already have an account?
+            <a href="/" class="text-decoration-none">Login</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid w-25 mt-4">
+      {{#if message}}
+        <p class="{{category}}">{{message}}</p>
+      {{/if}}
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
